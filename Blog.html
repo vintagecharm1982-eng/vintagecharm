@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Charm - Blog</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="Blog.css">
+       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="imagenes_blog/logoo.png">
+<!-- AOS Animaciones -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+        
+</head>
+<body>
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation Moderna y Sticky -->
+    <nav class="modern-nav" id="mainNav">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <div class="nav-logo">
+                
+                <span class="logo-text">Vintage Charm</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link active" data-category="all">Inicio</a>
+                <a href="#viajes" class="nav-link" data-category="viajes">Viajes</a>
+                <a href="#gastronomia" class="nav-link" data-category="gastronomia">Gastronomía</a>
+                <a href="#eventos" class="nav-link" data-category="eventos">Eventos</a>
+                <a href="#cultura" class="nav-link" data-category="cultura">Cultura</a>
+            </div>
+
+            <!-- Search Box Mejorada -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar artículos...">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <span class="mobile-logo">Vintage Charm</span>
+                <button class="mobile-close" id="mobileClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="#inicio" class="mobile-nav-link">Inicio</a>
+                <a href="#viajes" class="mobile-nav-link">Viajes</a>
+                <a href="#gastronomia" class="mobile-nav-link">Gastronomía</a>
+                <a href="#eventos" class="mobile-nav-link">Eventos</a>
+                <a href="#cultura" class="mobile-nav-link">Cultura</a>
+            </div>
+            <div class="mobile-search">
+                <input type="text" placeholder="Buscar..." class="mobile-search-input">
+            </div>
+        </div>
+    </nav>
+
+   <!-- Hero Section - Versión mejorada -->
+<section class="hero-enhanced" data-aos="fade-in">
+    <div class="hero-background">
+        <div class="hero-gradient"></div>
+        <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-content" data-aos="fade-up">
+        <span class="hero-badge">
+            <i class="fas fa-feather"></i> Bienvenido a Vintage Charm
+        </span>
+        <h1 class="hero-title">
+            <span class="title-line">Descubre la</span>
+            <span class="title;line">Elegancia del</span>
+            <span class="title-line highlight">Pasado</span>
+        </h1>
+        <p class="hero-subtitle">
+            Un viaje a través del tiempo en cada rincón de nuestro hotel boutique, donde la historia se encuentra con el lujo moderno.
+        </p>
+        
+        <div class="hero-actions">
+            <a href="#categoriesSection" class="cta-primary">
+                Explorar
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#newsletterSection" class="cta-secondary">
+                Suscríbete
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Habitaciones</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">1920</span>
+                <span class="stat-label">Fundación</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">4.8</span>
+                <span class="stat-label">Calificación</span>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">Desplázate para explorar</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Frases del Día -->
+           <section class="daily-quote" id="dailyQuote" data-aos="fade-up">
+                <div class="quote-container">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="quote-text" id="quoteText">
+                        "La verdadera elegancia es atemporal, como los recuerdos que creamos en cada estancia."
+                    </blockquote>
+                    <cite class="quote-author" id="quoteAuthor">— Fundadores del Vintage Charm Hotel</cite>
+                    <button class="quote-refresh" id="refreshQuote">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </section>
+
+      <!-- Sección: Artículos Destacados -->
+<section class="hero-posts" id="heroPostsSection" data-aos="zoom-in">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Artículos Destacados</h2>
+            <p class="section-subtitle">Descubre nuestras historias más populares y mejor valoradas</p>
+        </div>
+
+        <!-- Grid de artículos destacados -->
+        <div class="hero-grid">
+            <!-- Main Featured Card -->
+            <div class="main-featured featured-card" data-aos="zoom-in">
+                <div class="card-image-container">
+                    <div class="card-image">
+                        <img src="imagenes_blog/post5.jpg" alt="Historia del hotel vintage">
+                    </div>
+                </div>
+                <div class="card-overlay">
+                    <div class="card-meta">
+                        <span class="card-category">Historia</span>
+                        <span>5 min de lectura</span>
+                    </div>
+                    <h2 class="card-title">El Legado de Vintage Charm: 100 Años de Elegancia</h2>
+                    <p class="card-excerpt">Descubre cómo nuestro hotel pasó de ser una mansión privada a uno de los hoteles boutique más prestigiosos del mundo.</p>
+                    <a href="articulo1.html" class="read-more-link">
+                        <button class="read-more-btn">
+                            Leer más
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Side Featured Cards -->
+            <div class="side-featured">
+                <!-- First Side Card -->
+                <div class="side-card featured-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-image-container">
+                        <div class="card-image">
+                            <img src="imagenes_blog/post 2.jpeg" alt="Decoración vintage">
+                        </div>
+                    </div>
+                    <div class="card-overlay">
+                        <div class="card-meta">
+                            <span class="card-category">Decoración</span>
+                            <span>3 min de lectura</span>
+                        </div>
+                        <h2 class="card-title">Secretos de Decoración Vintage que Transformarán tu Espacio</h2>
+                        <a href="articulo1.html" class="read-more-link">
+                            <button class="read-more-btn">
+                                Leer más
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Second Side Card -->
+                <div class="side-card featured-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-image-container">
+                        <div class="card-image">
+                            <img src="imagenes_blog/post 1.jpg" alt="Cocina vintage">
+                        </div>
+                    </div>
+                    <div class="card-overlay">
+                        <div class="card-meta">
+                            <span class="card-category">Gastronomía</span>
+                            <span>4 min de lectura</span>
+                        </div>
+                        <h2 class="card-title">Recetas Vintage que Han Resistido el Paso del Tiempo</h2>
+                        <a href="articulo1.html" class="read-more-link">
+                            <button class="read-more-btn">
+                                Leer más
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección: Categorías Mejoradas -->
+
+<section class="categories-enhanced" id="categoriesSection" data-aos="fade-up">
+
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Explora Nuestras Categorías</h2>
+            <p class="section-subtitle">Encuentra el contenido perfecto para ti</p>
+        </div>
+
+        <!-- Filtros de Categoría -->
+        <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-th-large"></i>
+                <span>Todos</span>
+            </button>
+            <button class="filter-btn" data-filter="viajes">
+                <i class="fas fa-passport"></i>
+                <span>Viajes</span>
+            </button>
+            <button class="filter-btn" data-filter="gastronomia">
+                <i class="fas fa-utensils"></i>
+                <span>Gastronomía</span>
+            </button>
+            <button class="filter-btn" data-filter="eventos">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Eventos</span>
+            </button>
+            <button class="filter-btn" data-filter="cultura">
+                <i class="fas fa-palette"></i>
+                <span>Cultura</span>
+            </button>
+            <button class="filter-btn" data-filter="decoraciones">
+                <i class="fas fa-home"></i>
+                <span>Decoraciones</span>
+            </button>
+            <button class="filter-btn" data-filter="bienestar">
+                <i class="fas fa-spa"></i>
+                <span>Bienestar</span>
+            </button>
+        </div>
+
+        <!-- Grid de Categorías -->
+        <div class="categories-grid" id="categoriesGrid">
+            <!-- Categoría: Viajes -->
+            <div class="category-card" data-category="viajes">
+                <div class="category-icon">
+                    <i class="fas fa-passport"></i>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Viajes</h3>
+                    <p class="category-desc">Destinos únicos y experiencias inolvidables</p>
+                    <span class="category-count">4 artículos</span>
+                </div>
+            <div class="category-hover">
+    <button class="read-more-btn category-read-more">
+        Leer más
+        <i class="fas fa-arrow-right"></i>
+    </button>
+</div>
+</div>
+
+            <!-- Categoría: Gastronomía -->
+            <div class="category-card" data-category="gastronomia">
+                <div class="category-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Gastronomía</h3>
+                    <p class="category-desc">Sabores auténticos y recetas tradicionales</p>
+                    <span class="category-count">8 artículos</span>
+                </div>
+              <div class="category-hover">
+   <button class="read-more-btn category-read-more" data-category="gastronomia">
+    Leer más
+    <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+ </div>
+
+            <!-- Categoría: Eventos -->
+            <div class="category-card" data-category="eventos">
+                <div class="category-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Eventos</h3>
+                    <p class="category-desc">Celebraciones especiales y momentos únicos</p>
+                    <span class="category-count">5 artículos</span>
+                </div>
+              <div class="category-hover">
+  <button class="read-more-btn category-read-more" data-category="eventos">
+    Leer más
+    <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+            </div>
+
+            <!-- Categoría: Decoraciones -->
+            <div class="category-card" data-category="decoraciones">
+                <div class="category-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Decoraciones</h3>
+                    <p class="category-desc">Inspiración vintage para tu hogar con consejos de nuestros diseñadores.</p>
+                    <span class="category-count">6 artículos</span>
+                </div>
+               <div class="category-hover">
+   <button class="read-more-btn category-read-more" data-category="decoraciones">
+    Leer más
+    <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+            </div>
+
+            <!-- Categoría: Bienestar -->
+            <div class="category-card" data-category="bienestar">
+                <div class="category-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Bienestar</h3>
+                    <p class="category-desc">Rituales de relajación y cuidado personal inspirados en épocas pasadas</p>
+                    <span class="category-count">7 artículos</span>
+                </div>
+               <div class="category-hover">
+  <button class="read-more-btn category-read-more" data-category="bienestar">
+    Leer más
+    <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+</div>
+            <!-- Categoría: Cultura -->
+            <div class="category-card" data-category="cultura">
+                <div class="category-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Cultura</h3>
+                    <p class="category-desc">Arte, historia y tradiciones locales</p>
+                    <span class="category-count">8 artículos</span>
+                </div>
+               <div class="category-hover">
+    <button class="read-more-btn category-read-more" data-category="cultura">
+    Leer más
+    <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+        </div>
+    </div>
+</section>
+
+            <!-- Artículos Recientes -->
+            <section class="articles-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">Últimas Publicaciones</h2>
+                    <p class="section-subtitle">Mantente al día con nuestro contenido más reciente</p>
+                </div>
+                
+                <div class="articles-grid" id="articlesGrid">
+                    <!-- Los artículos se cargarán dinámicamente -->
+                </div>
+
+             <!-- Añadir esto después de la sección de artículos -->
+<div class="load-more-section">
+    <button id="loadMoreBtn" class="load-more-btn">
+        <span class="btn-text">
+            <i class="fas fa-plus-circle"></i> Cargar más historias
+        </span>
+        <span class="loading-spinner">
+            <i class="fas fa-spinner"></i>
+        </span>
+    </button>
+</div>
+
+            <!-- Lo Más Leído - Carrusel Mejorado -->
+    <section class="popular-enhanced" id="popularSection" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">Lo Más Leído</h2>
+                    <p class="section-subtitle">Los artículos favoritos de nuestra comunidad</p>
+                </div>
+
+                <div class="popular-carousel">
+                    <button class="carousel-btn prev" id="carouselPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="carousel-container" id="carouselContainer">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Popular articles will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn next" id="carouselNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <!-- Indicators will be generated dynamically -->
+                </div>
+            </section>
+
+
+
+<!-- Newsletter Section - Versión mejorada -->
+<section class="newsletter-enhanced" id="newsletterSection" data-aos="fade-left">
+    <div class="container">
+        <div class="newsletter-container">
+            <div class="newsletter-content" data-aos="fade-right">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h2 class="newsletter-title">Suscríbete a Nuestro Newsletter</h2>
+                <p class="newsletter-subtitle">
+                    Recibe las últimas noticias, ofertas exclusivas y consejos de viaje directamente en tu bandeja de entrada.
+                </p>
+                
+                <!-- Formulario con Formspree -->
+                <form 
+                    action="https://formspree.io/f/meozyrvk" 
+                    method="POST" 
+                    class="newsletter-form" 
+                    onsubmit="alert('¡Gracias por suscribirte! Revisa tu correo para recibir nuestras historias vintage.'); this.reset(); return false;"
+                >
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                            class="form-input" 
+                            placeholder="Tu nombre" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            class="form-input" 
+                            placeholder="Tu correo electrónico" 
+                            required
+                        >
+                    </div>
+                    <button type="submit" id="newsletterSubmit" class="newsletter-submit">
+                        <span class="btn-text">
+                            Suscribirse
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                        <span class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </form>
+                
+                <div class="newsletter-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Ofertas exclusivas para suscriptores</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Guías de viaje vintage</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Acceso anticipado a eventos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="newsletter-visual" data-aos="fade-left">
+                <div class="newsletter-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="mockup-content">
+                        <h3>Newsletter Vintage Charm</h3>
+                        <p>Descubre nuestros secretos mejor guardados y ofertas exclusivas cada semana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <!-- Recomendaciones Dinámicas -->
+          <section class="recommendations" id="recommendationsSection" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">Recomendado Para Ti</h2>
+                    <p class="section-subtitle">Basado en tus intereses y artículos más leídos</p>
+                </div>
+
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <!-- Recommendations will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Testimonios de Lectores -->
+         <section class="testimonials-enhanced" data-aos="fade-up">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Lo Que Dicen Nuestros Lectores</h2>
+                        <p class="section-subtitle">Testimonios reales de nuestra comunidad</p>
+                    </div>
+
+                    <div class="testimonials-slider" id="testimonialsSlider">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Este blog me transporta a una época de elegancia y distinción. 
+                                    Cada artículo es una joya literaria que me inspira a vivir experiencias únicas."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="imagenes_blog/Ana Garcia.jpeg" alt="Ana García">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Ana García</h4>
+                                        <p>Huésped frecuente</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "La calidad de los contenidos es excepcional. He descubierto lugares increíbles 
+                                    y experiencias gastronómicas memorables gracias a sus recomendaciones."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="imagenes_blog/Roberto Martinez.jpeg"" alt="Roberto Martínez">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Roberto Martínez</h4>
+                                        <p>Viajero apasionado</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Como organizadora de eventos, este blog es mi fuente de inspiración. 
+                                    Las ideas vintage y la atención al detalle son incomparables."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="imagenes_blog/Lucia Martinez.jpeg" alt="Lucía Fernández">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Lucía Fernández</h4>
+                                        <p>Event Planner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer Mejorado -->
+     <footer class="footer">
+   <footer class="footer" data-aos="fade-in">
+      <div class="footer-content">
+        <div class="footer-section" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+          <h3>Vintage Charm Hotel</h3>
+          <p>
+            Más que un hotel, somos custodios de momentos inolvidables y creadores de experiencias 
+            que trascienden el tiempo. Cada día escribimos nuevas páginas de nuestra historia junto a ti.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/17HtfHp6Vm/" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/vintagecharm1982?igsh=MTBkcWhoZ3p3MmJhbw==" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+           
+          </div>
+        </div>
+        <div class="footer-section" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+          <h3>Contacto</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i>San Pedro Sula, Honduras</li>
+            <li><i class="fas fa-phone"></i>+504 9999-9999</li>
+            <li><i class="fas fa-envelope"></i>vintagecharm1982@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Atención 24/7</li>
+          </ul>
+        </div>
+        <div class="footer-section" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="rooms.html">Habitaciones</a></li>
+            <li><a href="gallery.html">Restaurante</a></li>
+            <li><a href="contact.html">Nosotros</a></li>
+            <li><a href="reservations.html">Reservaciones</a></li>
+          </ul>
+        </div>
+   
+      </div>
+      <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+        <p>&copy; 2025 Vintage Charm Hotel. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner-large">
+                <i class="fas fa-crown"></i>
+            </div>
+            <p>Cargando experiencias elegantes...</p>
+        </div>
+    </div>
+
+ <script src="Blog.js" defer></script>
+</body>
+</html>
+</html>
